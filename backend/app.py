@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 import os
-from models.art_models import db, ArtPin
+from models.art_models import db
 
 # Initializing flask app
 app = Flask(__name__)
