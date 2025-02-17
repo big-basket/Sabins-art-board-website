@@ -3,14 +3,11 @@
 // Importing modules
 import React, { useState, useEffect } from "react";
 import "./App.css";
+import UploadForm from "./pages/uploadpage.jsx";
 
 function App() {
-    
-
     return (
-        <div className="App">  
-            <h1>App</h1>
-        </div>
+        <UploadForm />
     );
 }
 
