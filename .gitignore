@@ -7,6 +7,8 @@ instance/
 __pycache__/
 /.pnp
 .pnp.js
+uploads/
+database/
 
 # testing
 /coverage
