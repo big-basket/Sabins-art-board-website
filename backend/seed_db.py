@@ -6,8 +6,8 @@ from models.art_models import ArtPin, db
 
 # Initialize Flask app context 
 app = Flask(__name__)
-app.config['UPLOAD_FOLDER_IMAGES'] = "backend/uploads/images"
-app.config['UPLOAD_FOLDER_MARKDOWN'] = "backend/uploads/markdown"
+app.config['UPLOAD_FOLDER_IMAGES'] = os.path.join(app.static_folder, 'uploads', 'images')
+app.config['UPLOAD_FOLDER_MARKDOWN'] = os.path.join(app.static_folder, 'uploads', 'markdown')
 os.makedirs(app.config['UPLOAD_FOLDER_IMAGES'], exist_ok=True)
 os.makedirs(app.config['UPLOAD_FOLDER_MARKDOWN'], exist_ok=True)
 
@@ -102,7 +102,7 @@ def seed_database():
 
             if image_path:
                 new_art = ArtPin(
-                    image_location=image_path,
+                    image_filename=os.path.basename(image_path),
                     title=art["title"],
                     description=art["description"],
                     md_reference=md_path

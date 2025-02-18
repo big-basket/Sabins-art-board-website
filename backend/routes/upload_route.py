@@ -22,10 +22,10 @@ def upload():
     if image and allowed_file(image.filename):
         image_ext = image.filename.rsplit('.', 1)[1].lower()
         image_filename = f"{uuid.uuid4()}.{image_ext}"
-        image_path = os.path.join(current_app.config['UPLOAD_FOLDER_IMAGES'], secure_filename(image_filename))
+        image_path = os.path.join(current_app.config["UPLOAD_FOLDER_IMAGES"], secure_filename(image_filename))
         image.save(image_path)
     else:
-        return jsonify({'error': 'Invalid image file'}), 400
+        return jsonify({"error": "Invalid image file"}), 400
 
     md_path = None
     if md_file and allowed_file(md_file.filename):
@@ -34,7 +34,7 @@ def upload():
         md_file.save(md_path)
 
     new_art = ArtPin(
-        image_location=image_path,
+        image_filename=image_filename,
         title=title,
         description=description,
         md_reference=md_path
