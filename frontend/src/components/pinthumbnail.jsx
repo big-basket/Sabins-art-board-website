@@ -4,7 +4,7 @@ const PinThumbnail = ({ pin }) => {
   return (
     <div className="bg-white shadow-lg rounded-lg overflow-hidden">
       <img
-        src={pin.image_location}
+        src={pin.image_filename}
         alt={pin.title}
         className="w-full h-48 object-cover"
       />
