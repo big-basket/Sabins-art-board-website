@@ -30,6 +30,42 @@ art_data = [
         "title": "Mountain Peaks",
         "description": "Snowy mountain peaks under a starry sky.",
         "md_content": "# Mountains\nThe grandeur of nature is evident in this piece."
+    },
+    {
+        "image_url": "https://i.pinimg.com/736x/d8/7a/8c/d87a8cabfc5b115afb815351deeb4be1.jpg",
+        "title": "Forest Pathway",
+        "description": "A serene forest pathway surrounded by tall trees and soft sunlight.",
+        "md_content": "# Forest Pathway\nA peaceful walk through the woods, captured in brushstrokes."
+    },
+    {
+        "image_url": "https://i.pinimg.com/736x/72/53/96/725396b0a8a947241cf631b482c1f13e.jpg",
+        "title": "City Lights",
+        "description": "A bustling city at night illuminated by vibrant lights.",
+        "md_content": "# City Lights\nAn urban landscape brought to life with color and energy."
+    },
+    {
+        "image_url": "https://i.pinimg.com/736x/1e/d9/78/1ed978cfb6a7c5e63a5cac4f616df648.jpg",
+        "title": "Autumn Leaves",
+        "description": "Golden and red leaves falling in an autumn forest.",
+        "md_content": "# Autumn Leaves\nThe essence of fall is beautifully depicted in this painting."
+    },
+    {
+        "image_url": "https://i.pinimg.com/736x/3b/6e/d4/3b6ed4d29414e7ff8d1a1d850b15a1c9.jpg",
+        "title": "Moonlit Lake",
+        "description": "A calm lake reflecting the full moon and starry sky.",
+        "md_content": "# Moonlit Lake\nThe tranquility of a moonlit night on a still lake."
+    },
+    {
+        "image_url": "https://i.pinimg.com/736x/a6/23/ba/a623badfa740f86accc5bcba32c60fbd.jpg",
+        "title": "Desert Mirage",
+        "description": "A dreamy desert landscape with a mesmerizing mirage.",
+        "md_content": "# Desert Mirage\nThe heat and mystery of the desert captured in art."
+    },
+    {
+        "image_url": "https://i.pinimg.com/736x/04/07/cb/0407cba7d7660c91190c9b49525c15d7.jpg",
+        "title": "Cherry Blossom Dream",
+        "description": "A delicate depiction of cherry blossoms in full bloom.",
+        "md_content": "# Cherry Blossom\nA dreamy springtime moment in pink and white hues."
     }
 ]
 
