@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import "../styles/uploadform.css";
 
 export default function UploadForm() {
   const [title, setTitle] = useState("");
@@ -38,31 +39,31 @@ export default function UploadForm() {
   };
 
   return (
-    <div style={{ maxWidth: "500px", margin: "0 auto", padding: "20px", border: "1px solid #ccc", borderRadius: "5px", boxShadow: "2px 2px 12px rgba(0,0,0,0.1)" }}>
+    <div className="upload-container">
       <h2>Upload Art File</h2>
-      {message && <p style={{ color: "red" }}>{message}</p>}
+      {message && <p className="message">{message}</p>}
       <form onSubmit={handleSubmit}>
-        <div style={{ marginBottom: "10px" }}>
+        <div className="form-group">
           <label>Title</label>
-          <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} required style={{ width: "100%", padding: "8px" }} />
+          <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} required />
         </div>
 
-        <div style={{ marginBottom: "10px" }}>
+        <div className="form-group">
           <label>Description</label>
-          <textarea value={description} onChange={(e) => setDescription(e.target.value)} required style={{ width: "100%", padding: "8px" }}></textarea>
+          <textarea value={description} onChange={(e) => setDescription(e.target.value)} required></textarea>
         </div>
 
-        <div style={{ marginBottom: "10px" }}>
+        <div className="form-group">
           <label>Image (png, jpg, jpeg, gif)</label>
-          <input type="file" accept="image/*" onChange={(e) => handleFileChange(e, setImage)} required style={{ width: "100%", padding: "8px" }} />
+          <input type="file" accept="image/*" onChange={(e) => handleFileChange(e, setImage)} required />
         </div>
 
-        <div style={{ marginBottom: "10px" }}>
+        <div className="form-group">
           <label>Markdown File (Optional)</label>
-          <input type="file" accept=".md" onChange={(e) => handleFileChange(e, setMarkdown)} style={{ width: "100%", padding: "8px" }} />
+          <input type="file" accept=".md" onChange={(e) => handleFileChange(e, setMarkdown)} />
         </div>
 
-        <button type="submit" style={{ width: "100%", padding: "10px", backgroundColor: "#007bff", color: "#fff", border: "none", cursor: "pointer" }}>Upload</button>
+        <button type="submit" className="upload-button">Upload</button>
       </form>
     </div>
   );

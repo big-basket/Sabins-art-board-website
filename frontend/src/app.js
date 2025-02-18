@@ -1,13 +1,18 @@
-// Filename - App.js
-
-// Importing modules
-import React, { useState, useEffect } from "react";
-import "./App.css";
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import NavBar from "./components/navbar.jsx";
+import HomePage from "./pages/homepage.jsx";
 import UploadForm from "./pages/uploadpage.jsx";
 
 function App() {
     return (
-        <UploadForm />
+        <div>
+            <Routes> 
+                <Route path="/" element={<HomePage />} />
+                <Route path="/upload" element={<UploadForm />} />
+            </Routes>
+        </div>
+        
     );
 }
 
