@@ -4,7 +4,7 @@ from flask import Blueprint, request, jsonify, current_app
 from werkzeug.utils import secure_filename
 from models.art_models import ArtPin, db
 
-upload_file = Blueprint('upload_file', __name__)  # Define a Blueprint
+upload_file = Blueprint('upload_file', __name__)  
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in current_app.config['ALLOWED_EXTENSIONS']
@@ -15,7 +15,7 @@ def upload():
         return jsonify({'error': 'Missing required fields'}), 400
     
     image = request.files['image']
-    md_file = request.files.get('markdown')  # Markdown file is optional
+    md_file = request.files.get('markdown')  
     title = request.form['title']
     description = request.form['description']
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../styles/pinthumbnail.css"; // Importing the extracted CSS file
+import "../styles/pinthumbnail.css"; 
 
 const PinThumbnail = ({ pin }) => {
   return (

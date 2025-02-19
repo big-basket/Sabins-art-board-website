@@ -18,7 +18,7 @@
   
   .pin-image {
     width: 100%;
-    height: 12rem; /* Equivalent to h-48 */
+    height: 12rem; 
     object-fit: cover;
   }
   
@@ -27,7 +27,7 @@
   }
   
   .pin-title {
-    font-size: 1.125rem; /* Equivalent to text-lg */
+    font-size: 1.125rem; 
     font-weight: 600;
   }
   
