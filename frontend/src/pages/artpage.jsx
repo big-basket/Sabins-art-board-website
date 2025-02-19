@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import "../styles/artpage.css"; 
 
 const ArtPage = () => {
   const { id } = useParams();
@@ -17,14 +18,14 @@ const ArtPage = () => {
   if (!artwork) return <p>Loading...</p>;
 
   return (
-    <div className="container mx-auto p-6">
-      <h1 className="text-2xl font-bold">{artwork.title}</h1>
+    <div className="art-container">
+      <h1 className="art-title">{artwork.title}</h1>
       <img
         src={artwork.image_filename}
         alt={artwork.title}
-        className="w-full h-auto my-4"
+        className="art-image"
       />
-      <p className="text-gray-700">{artwork.description}</p>
+      <p className="art-description">{artwork.description}</p>
     </div>
   );
 };

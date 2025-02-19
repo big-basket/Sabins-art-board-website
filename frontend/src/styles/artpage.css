@@ -1,0 +1,21 @@
+.art-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 24px;
+  }
+  
+  .art-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .art-image {
+    width: 100%;
+    height: auto;
+    margin: 16px 0;
+  }
+  
+  .art-description {
+    color: #4a5568; 
+  }
+  

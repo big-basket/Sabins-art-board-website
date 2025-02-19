@@ -1,17 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "../styles/pinthumbnail.css"; // Importing the extracted CSS file
 
 const PinThumbnail = ({ pin }) => {
   return (
-    <Link to={`/art/${pin.id}`} style={{ textDecoration: "none", color: "inherit" }}>
-      <div className="bg-white shadow-lg rounded-lg overflow-hidden cursor-pointer">
+    <Link to={`/art/${pin.id}`} className="pin-link">
+      <div className="pin-card">
         <img
           src={pin.image_filename}
           alt={pin.title}
-          className="w-full h-48 object-cover"
+          className="pin-image"
         />
-        <div className="p-3">
-          <h3 className="text-lg font-semibold">{pin.title}</h3>
+        <div className="pin-info">
+          <h3 className="pin-title">{pin.title}</h3>
         </div>
       </div>
     </Link>
