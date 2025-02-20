@@ -3,6 +3,8 @@ import uuid
 import requests
 from flask import Flask
 from models.art_models import ArtPin, db
+from PIL import Image
+from io import BytesIO  
 
 # Initialize Flask app context 
 app = Flask(__name__)
@@ -72,15 +74,14 @@ art_data = [
 def download_image(image_url, save_folder):
     response = requests.get(image_url, stream=True)
     if response.status_code == 200:
-        ext = image_url.split('.')[-1].split('?')[0]  # Extract file extension
-        filename = f"{uuid.uuid4()}.{ext}"
+        filename = f"{uuid.uuid4()}.webp"
         image_path = os.path.join(save_folder, filename)
 
-        with open(image_path, "wb") as img_file:
-            for chunk in response.iter_content(1024):
-                img_file.write(chunk)
+        image = Image.open(BytesIO(response.content))
 
+        image.save(image_path, "WEBP", quality=80) 
         return image_path
+
     return None
 
 def save_markdown(content, save_folder):

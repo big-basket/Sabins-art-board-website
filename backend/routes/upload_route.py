@@ -3,6 +3,8 @@ import uuid
 from flask import Blueprint, request, jsonify, current_app
 from werkzeug.utils import secure_filename
 from models.art_models import ArtPin, db
+import io
+from PIL import Image
 
 upload_file = Blueprint('upload_file', __name__)  
 
@@ -20,10 +22,12 @@ def upload():
     description = request.form['description']
 
     if image and allowed_file(image.filename):
-        image_ext = image.filename.rsplit('.', 1)[1].lower()
-        image_filename = f"{uuid.uuid4()}.{image_ext}"
+        filename = f"{uuid.uuid4()}.webp"
+        image_path = os.path.join(current_app.config["UPLOAD_FOLDER_IMAGES"], filename)
+
+        image_filename = f"{uuid.uuid4()}.webp"
         image_path = os.path.join(current_app.config["UPLOAD_FOLDER_IMAGES"], secure_filename(image_filename))
-        image.save(image_path)
+        image.save(image_path, "WEBP", quality=80)
     else:
         return jsonify({"error": "Invalid image file"}), 400
 
