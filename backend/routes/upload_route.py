@@ -3,8 +3,6 @@ import uuid
 from flask import Blueprint, request, jsonify, current_app
 from werkzeug.utils import secure_filename
 from models.art_models import ArtPin, db
-import io
-from PIL import Image
 
 upload_file = Blueprint('upload_file', __name__)  
 
