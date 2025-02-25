@@ -4,7 +4,7 @@ import NavBar from "./components/navbar.jsx";
 import HomePage from "./pages/homepage.jsx";
 import UploadForm from "./pages/uploadpage.jsx";
 import ArtPage from "./pages/artpage.jsx";    
-
+import "./App.css";
 
 function App() {
     return (
